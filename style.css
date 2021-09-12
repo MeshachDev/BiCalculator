@@ -102,4 +102,33 @@ padding: 10px 0px;
        padding: 0px 0px;
        width: 100%;
    }
+
+   .bi_div{
+       display: block;
+   }
+}
+
+div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.bi_btn{
+    font-size: 20px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+.bi_btn:hover{
+   background-color: black;
+   color:white;
+}
+.bi_btn:focus{
+    background-color: rgb(9, 34, 0);
+   color:white;
 }

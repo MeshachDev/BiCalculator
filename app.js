@@ -3,33 +3,58 @@ const deci_num = document.getElementById("deci_input");
 const oct_num = document.getElementById("oct_input");
 const hex_num = document.getElementById("hex_input");
 const btn = document.getElementById("btn")
-var binary = "";
-const hello = ()=>{
-    var bi = bi_num.value.split('')
-    const binum = bi.map((i) => Number(i));
 
-    for (let index = 0; index < binum.length; index++) {
-        if((binum[index] == 1) || (binum[index] == 0) || (binum[index] == '.')){
-            
-        }
-        else{
-            bi_num.value = "Please Enter only 0 and 1"
-        }
+const binary= ()=>{
+    if((bi_num.value === ""))
+    {
+        bi_num.value = "Please enter a valid number"
     }
-
-    var deci = parseFloat(deci_num.value)
-    for(var i = 0; deci<=1; i++){
-        binary += (deci%2).toString;
-        deci=Math.floor(deci/2);
-        bi_num.value = binary.toString();
+    else{
+        bi_num.value = parseInt(bi_num.value, 2).toString(2);
+        deci_num.value = parseInt(bi_num.value, 2).toString(10);
+        oct_num.value = parseInt(bi_num.value, 2).toString(8);
+        hex_num.value = parseInt(bi_num.value, 2).toString(14).toUpperCase();
+    }
+   
+}
+const deci = ()=>{
+    if((deci_num.value === "" ))
+    {
+        deci_num.value = "Please enter a valid number"
+    }
+    else{
+    bi_num.value = parseInt(deci_num.value).toString(2);
+    deci_num.value = parseInt(deci_num.value).toString(10);
+    oct_num.value = parseInt(deci_num.value).toString(8);
+    hex_num.value = parseInt(deci_num.value).toString(14).toUpperCase();
 }
 }
-
-
+const oct = ()=>{
+    if((oct_num.value === ""))
+    {
+        oct_num.value = "Please enter a valid number"
+    }
+    else{
+    bi_num.value = parseInt(oct_num.value).toString(2);
+    deci_num.value = parseInt(oct_num.value).toString(10);
+    hex_num.value = parseInt(oct_num.value).toString(14).toUpperCase();
+}
+}
+const hex = ()=>{
+    if((hex_num.value === "" ))
+    {
+        hex_num.value = "Please enter a valid number"
+    }
+    else{
+    bi_num.value = (parseInt(hex_num.value, 16).toString(2))
+    deci_num.value =(parseInt(hex_num.value, 16)).toString(10);
+    oct_num.value =(parseInt(hex_num.value, 16)).toString(8);
+    hex_num.value =(hex_num.value).toString(14).toUpperCase();
+}
+}
 const clearAll = () =>{
     bi_num.value = null;
     deci_num.value = null;
     oct_num.value = null;
     hex_num.value = null;
 }
-
