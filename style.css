@@ -27,6 +27,7 @@ header {
     box-sizing: border-box;
     background-color: rgb(56, 56, 56);
     color: white;
+    z-index:10;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -89,12 +90,12 @@ padding: 10px 0px;
 
 @media only screen and (max-width: 600px) {
    .main-body{
-    padding: 50px 0px;
+    padding: 10px 0px;
     width: 100%;
    }
    .inputs_txt{
     width: 90%;
-    font-size:3.5vh;
+    font: size 16px;
     margin: 30px 10px;
    }
    #subdody{
